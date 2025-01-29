@@ -1,0 +1,442 @@
+/* appling google font over the website  */
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+/* styling menu icon */
+.nav-menu{
+    border: none;
+    background-color: #e2c2df;
+    font-size: 1.5rem;
+    color: palevioletred;
+}
+/* styling navbar links  */
+.navbar-nav a{
+    color: #9E6876;
+    position: relative;
+}
+.navbar-nav a:hover{
+    color: #E88BB1;
+}
+.navbar-nav a:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    top: 35px;
+    position: absolute;
+    background: #FFD3DD;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.navbar-nav a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  /* styling contact btn  */
+.c-btn{
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.c-btn::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left:0;
+    top:0;
+    border-radius: 10px;
+}
+.c-btn::before{
+    content: "";
+    background: linear-gradient(
+    45deg,
+    #ff0000 ,#ff7300 ,#fffb00, #48ff00,
+    #00ffd5 ,#002bff ,#ff00c8, #ff0000
+    );
+   position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 1;
+}
+@keyframes glowing {
+   0%{background-position: 0 0}
+    50%{background-position: 400% 0}
+    100%{background-position: 0 0}
+}
+.c-btn:hover::before{
+    opacity: 1;
+}
+.c-btn:active:after{
+    background: transparent;
+}
+.c-btn:active{
+    color: #000;
+    font-weight: bold;
+}
+/* styling home section starts */
+.home{
+    background-color: #E88BB1;
+    padding: 30px 0px 10px 0px;
+}
+.home h2{
+    font-size: 3rem;
+    line-height: 4rem;
+}
+.c-orange{
+    color: #FFD3DD;
+    font-weight: 700;
+    font-size: 4rem;
+}
+.home p{
+    width: fit-content;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.h-btn:hover{
+    background: #B43A79;
+    color: #FDD5E6;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+.link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #81BFB7;
+    position: relative;
+}
+.link::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+    background-color: #FDD5E6;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.link:hover{
+    color: #E88BB1;
+}
+.link:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* adding animation to home section image  */
+.home img{
+    animation: floatimg 2s ease-in-out infinite;
+}
+
+@keyframes floatimg {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-24px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* expertise section starts */
+.heading small{
+    font-family: "Showcard Gothic", serif;
+    color: #3f396d;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.heading h3{
+    font-family: "Showcard Gothic", serif;
+    margin-top: 0.5rem;
+    color: #81BFB7;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.expertise h4{
+    color: #D76797;
+    font-weight: 700;
+}
+.expertise a{
+    text-decoration: none;
+    color: #B43A79;
+}
+.expertise a:hover{
+    color: #D76797;
+}
+.expertise .service-card{
+    text-align: center;
+    padding: 15px 15px;
+    border-radius: 0.7rem;
+}
+.expertise{
+    background-color: #FFD3DD;
+}
+
+/* skill section starts */
+.skill{
+    background-color: #E88BB1;
+}
+.progress-card{
+    padding: 12% 10% 10% 15%;
+    background-color: #E88BB1;
+    text-align: center;
+    border-radius: 10%;
+}
+.progress-card:hover{
+    transform: scale(1.1,1.1);
+    transition-duration: 0.6s;
+}
+.circular-progress{
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: conic-gradient(#B43A79 3.6deg, #FDD5E6 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #FDD5E6;
+}
+.progress-value{
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.html-progress{
+    color: magenta;
+}
+.javascript-progress{
+    color: #B43A79;
+}
+.php-progress{
+    color: #E88BB1;
+}
+.reactjs-progress{
+    color: #D76797;
+}
+.text{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.heading p{
+    font-size: 1.3rem;
+}
+
+/* portfolio section starts */
+#myBtnContainer{
+    margin-bottom: 45px;
+}
+#myBtnContainer button{
+  border: none;
+  color: #B43A79;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;   
+  display: inline-block;
+  margin: 0 25px;
+}
+#myBtnContainer button:hover{
+    color: #D76797;
+}
+
+#myBtnContainer button:focus{
+    outline: none;
+}
+.post .content h4{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.post .card{
+    border: none;
+}
+
+/* testimonial section starts */
+.testimonial img:hover{
+    transform: scale(1.2,1.2);
+    transition-duration: 1s;
+}
+.testimonial h4{
+    color: #B43A79;
+}
+.testimonial i{
+    font-size: 2.9rem;
+    color: #E88BB1;
+    
+}
+.testimonial .nextprev-btn{
+    border: none;
+    background-color: #FDD5E6;
+}
+.prev:hover,.prev-btn:hover{
+    color:#D76797;
+    transform: translateX(-10px);
+    transition-duration: 1s;
+}
+.next:hover,.next-btn:hover{
+    color:#D76797;
+    transform: translateX(10px);
+    transition-duration: 1s;
+}
+
+/* blog section starts */
+.blog{
+    background-color: #FDD5E6;
+}
+.blog .blogpost .card{
+    border: none;
+    border-radius: 5%;
+}
+.nav-bg{
+    background-color: #FFD3DD;
+}
+
+.blog .blogpost small{
+    color: #D76797;
+    font-size: 1.1rem;
+}
+.blog .blogpost h4,.blogpost a{
+    color: #B43A79;
+    font-weight: 700;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+.blogpost a:hover{
+    color: #FDD5E6;
+}
+.blog .blogpost .read-more-btn{
+    text-decoration: none;
+    color: #B43A79;
+    font-size: 1.1rem;
+}
+.blog .blogpost .read-more-btn:hover{
+    color: #E88BB1;
+}
+/* styling modal group  */
+.btn-c{
+    margin-left: 94%;
+    background-color: transparent;
+    border: none;
+    color: #E88BB1;
+    font-size: 2rem;
+    margin-top: -3%;
+}
+.btn-c i{
+    color: #B43A79;
+}
+.modal-body .content span{
+    font-size: 1rem;
+}
+.modal-body .content small{
+    font-size: 1rem;
+    color: #D76797;
+}
+/* contact section starts */
+.contact{
+    background-color: #FDD5E6;
+}
+.contact-details i{
+    font-size: 1.5rem;
+    color: magenta;
+}
+.contact-details p{
+    font-family: "Showcard Gothic", serif;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.contact-form .form-control:focus{
+    box-shadow: none;
+    border: 1px solid mediumvioletred;
+}
+.contact-form .form-control{
+    padding: 10px 10px;
+    width: 80%;
+}
+
+/* footer section starts */
+footer{
+    background-color: hsl(174, 39%, 84%);
+}
+
+footer .link-group a{
+    font-family: "Showcard Gothic", serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #B43A79;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+footer .link-group a:hover{
+    color: magenta;
+}
+.social-links button{
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background-color: palevioletred;
+    padding: 14px 15px 10px 15px;
+}
+.social-links .dribble{
+    color: mediumvioletred;
+}
+.social-links button:hover{
+    color: cyan;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+.social-links .dribble:hover{
+    background-color: #fefddb;
+}
+.social-links .whatsapp{
+    color: lightcoral;
+}
+.social-links .whatsapp:hover{
+    background-color: orchid;
+}
+.social-links .behance{
+    color: pink;
+}
+.social-links .behance:hover{
+    background-color: powderblue;
+}
+
+/* styling back to top button */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    font-size: 1.4rem;
+    background-color: plum;
+    color: gold;
+    animation: pulse 3s infinite;
+}
