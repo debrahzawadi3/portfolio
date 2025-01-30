@@ -1,5 +1,6 @@
 /* appling google font over the website  */
 body{
+    background-color: #FDD5E6;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
 }
@@ -316,7 +317,7 @@ body{
     border-radius: 5%;
 }
 .nav-bg{
-    background-color: #FFD3DD;
+    background-color: #B43A79;
 }
 
 .blog .blogpost small{
@@ -439,4 +440,7 @@ footer .link-group a:hover{
     background-color: plum;
     color: gold;
     animation: pulse 3s infinite;
+}
+.navbar-nav{
+    background-color: #FFD3DD;
 }
